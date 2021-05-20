@@ -15,8 +15,3 @@
     background-color: hsl(180, 90%, 20%);
     transform: scale(1.05);
 }
-
-.score--gothic {
-    background-image: url("../images/gothic.jpg");
-    border: 5px solid black;
-}

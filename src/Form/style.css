@@ -61,20 +61,3 @@
     border-radius: 10px;
     font-size: larger;
 }
-
-.form__legend--gothic {
-    background-image: url("../images/gothic.jpg");
-    border: 5px solid black;
-}
-
-.form__button--gothic {
-    background-image: url("../images/gothic.jpg");
-    border: 5px solid black;
-}
-
-.form__fieldset--gothic {
-    background-image: url("../images/gothic.jpg");
-    background-position: 50% 70%;
-    border: 5px solid black;
-
-}
