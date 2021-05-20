@@ -3,11 +3,13 @@
     max-width: 150px;
     display: inline-block;
     margin-right: 5px;
+    font-size: large;
 }
 
 .form__field {
     border: 3px solid #ccc;
     padding: 10px;
+    margin-top: 10px;
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
@@ -29,6 +31,7 @@
     background-color: rgb(9, 177, 177);
     color: white;
     transition: 1s;
+    font-size: large;
 }
 
 .form__button:hover {
@@ -56,6 +59,7 @@
     color: white;
     padding: 10px;
     border-radius: 10px;
+    font-size: larger;
 }
 
 .form__legend--gothic {
