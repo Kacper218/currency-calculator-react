@@ -1,25 +1,31 @@
 import React, { useState } from 'react';
 import "./style.css";
 
-const Form = ({ options }) => {
+const Form = ({ options, setScore, score }) => {
 
-  const [x, setX] = useState(1);
   const [amount, setAmount] = useState(0);
-  const [converter, setConverter] = useState(4.51);
+  const [converter, setConverter] = useState("4.51");
+  const [option, setOption] = useState("");
+
+  const onSelectChange = ({ target }) => setOption(target.value);
 
   const onFormSubmit = (event) => {
-    event.preventDefault();
-  };
 
-  const onChangeSelect = () => {
-    if (x === 1) {
-      setConverter(converter => converter = 21.37)
-      setX(x => x + 1)
-    } else {
-      setConverter(converter => converter = 4.51)
-      setX(x => x - 1)
-    }
-  }
+    switch (option) {
+      case "euro":
+        setConverter(converter => converter = 4.51);
+        break;
+      case "ruda":
+        setConverter(converter => converter = 21)
+        break;
+    };
+
+    event.preventDefault();
+
+    console.log(option);
+    console.log(converter);
+
+  };
 
   return (
 
@@ -36,12 +42,13 @@ const Form = ({ options }) => {
           <select
             className="form__field"
             name="currency"
-            onChange={onChangeSelect}
+            value={option}
+            onChange={onSelectChange}
           >
             {options.map((option) => (
               <option
-                key={option.id}
                 value={option.value}
+                key={option.id}
               >
                 {option.label}
               </option>
@@ -61,21 +68,6 @@ const Form = ({ options }) => {
               step="0.01"
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
-            />
-          </label>
-        </p>
-        <p>
-          <label>
-            <span className="form__labelText">
-              Podaj aktualny kurs euro:
-              </span>
-            <input
-              required
-              className="form__field"
-              type="number"
-              min="0.01"
-              step="0.01"
-              value={converter}
             />
           </label>
         </p>

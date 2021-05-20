@@ -1,9 +1,12 @@
+import React, { useState } from 'react';
 import './App.css';
 import Form from './Form';
 import Score from './Score';
 import Container from './Container';
 
 function App() {
+
+	const [score, setScore] = useState(0)
 
   const options = [
     {
@@ -22,7 +25,7 @@ function App() {
 	return (
 		<Container>
 
-			<Form options={options}/>
+			<Form score={score} setScore={setScore} options={options}/>
 
 			<Score />
 
