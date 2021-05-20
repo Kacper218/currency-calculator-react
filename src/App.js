@@ -6,7 +6,9 @@ import Container from './Container';
 
 function App() {
 
-	const [score, setScore] = useState(0)
+	const [score, setScore] = useState("N/a")
+  const [amount, setAmount] = useState(0);
+  const [option, setOption] = useState("");
 
   const options = [
     {
@@ -25,9 +27,9 @@ function App() {
 	return (
 		<Container>
 
-			<Form score={score} setScore={setScore} options={options}/>
+			<Form option={option} setOption={setOption} amount={amount} setAmount={setAmount} score={score} setScore={setScore} options={options}/>
 
-			<Score />
+			<Score option={option} score={score} amount={amount}/>
 
 		</Container>
 

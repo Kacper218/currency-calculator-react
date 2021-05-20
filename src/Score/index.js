@@ -1,15 +1,13 @@
 import React from 'react';
 import "./style.css";
 
-const Score = () => {
-    return (
+const Score = ({ option, amount, score }) => {
+  return (
 
-        <div className="score">
-            <p><strong className="">N/a</strong> złotych to: <strong className=""> N/a</strong>
-                <span className="">euro.</span>
-            </p>
-        </div>
-    );
+    <div className="score">
+      <strong>{amount}</strong> złotych to: <strong>{score}</strong> {option === "euro" ? "euro" : "magicznej rudy"}
+    </div>
+  );
 };
 
 export default Score;
