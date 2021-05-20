@@ -6,7 +6,7 @@ import Container from './Container';
 
 function App() {
 
-	const [score, setScore] = useState("N/a")
+  const [score, setScore] = useState("N/a")
   const [amount, setAmount] = useState(0);
   const [option, setOption] = useState("");
 
@@ -24,17 +24,28 @@ function App() {
     }
   ];
 
-	return (
-		<Container>
+  return (
+    <Container>
 
-			<Form option={option} setOption={setOption} amount={amount} setAmount={setAmount} score={score} setScore={setScore} options={options}/>
+      <Form
+        option={option}
+        setOption={setOption}
+        amount={amount}
+        setAmount={setAmount}
+        score={score}
+        setScore={setScore}
+        options={options}
+      />
 
-			<Score option={option} score={score} amount={amount}/>
+      <Score
+        option={option}
+        score={score}
+        amount={amount}
+      />
 
-		</Container>
+    </Container>
 
-
-	)
-}
+  );
+};
 
 export default App;

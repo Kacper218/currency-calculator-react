@@ -3,7 +3,6 @@ import "./style.css";
 
 const Form = ({ amount, setAmount, options, option, setOption, setScore, score }) => {
 
-
   const onSelectChange = ({ target }) => {
     setOption(target.value);
     setScore(score => score = "N/a")
@@ -20,12 +19,10 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
       let converter = 4.51;
       setScore((score) => score = converter * amount);
       return score;
-    }
-
+    };
   };
 
   return (
-
     <form
       className="form"
       onSubmit={onFormSubmit}
