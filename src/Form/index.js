@@ -4,26 +4,27 @@ import "./style.css";
 const Form = ({ options, setScore, score }) => {
 
   const [amount, setAmount] = useState(0);
-  const [converter, setConverter] = useState("4.51");
   const [option, setOption] = useState("");
 
   const onSelectChange = ({ target }) => setOption(target.value);
 
   const onFormSubmit = (event) => {
-
-    switch (option) {
-      case "euro":
-        setConverter(converter => converter = 4.51);
-        break;
-      case "ruda":
-        setConverter(converter => converter = 21)
-        break;
-    };
-
     event.preventDefault();
 
     console.log(option);
-    console.log(converter);
+    if (option === "ruda") {
+      let converter = 21;
+      setScore((score) => score = converter * amount);
+      console.log(score);
+      return score;
+    } else {
+      let converter = 4.51;
+      setScore((score) => score = converter * amount);
+      console.log(score);
+      return score;
+    }
+
+
 
   };
 
