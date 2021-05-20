@@ -4,6 +4,7 @@
     display: inline-block;
     margin-right: 5px;
     font-size: large;
+    vertical-align: middle;
 }
 
 .form__field {
@@ -14,6 +15,7 @@
     max-width: 400px;
     border-radius: 10px;
     transition: 1s;
+    vertical-align: middle;
 }
 
 .form__field:hover {

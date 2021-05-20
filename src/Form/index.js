@@ -29,7 +29,6 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
     >
       <fieldset className="form__fieldset">
         <legend className="form__legend">Kalkulator walutowy</legend>
-        <p>
           <span className="form__labelText">
             Wybierz walutę:
             </span>
@@ -48,7 +47,6 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
               </option>
             ))}
           </select>
-        </p>
         <p>
           <label>
             <span className="form__labelText">
