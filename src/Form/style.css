@@ -11,6 +11,11 @@
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
+    transition: 1s;
+}
+
+.form__field:hover {
+    transform: scale(1.05);
 }
 
 .form__button {
@@ -23,10 +28,12 @@
     border: 3px solid white;
     background-color: rgb(9, 177, 177);
     color: white;
+    transition: 1s;
 }
 
 .form__button:hover {
     background-color: hsl(180, 90%, 20%);
+    transform: scale(1.05);
 }
 
 .form__button:active {

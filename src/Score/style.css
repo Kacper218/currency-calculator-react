@@ -8,10 +8,12 @@
     padding: 20px;
     margin: 10px 0;
     border-radius: 10px;
+    transition: 1s;
 }
 
 .score:hover {
     background-color: hsl(180, 90%, 20%);
+    transform: scale(1.05);
 }
 
 .score--gothic {
