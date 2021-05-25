@@ -13,7 +13,7 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
       .find(({ value }) => value === option)
       .converter;
 
-     setScore((score) => score = amount * rate);
+     setScore(score = amount * rate);
   };
 
   const onFormSubmit = (event) => {
