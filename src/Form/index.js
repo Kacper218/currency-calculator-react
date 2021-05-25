@@ -1,4 +1,5 @@
 import React from 'react';
+import Clock from './Clock';
 import "./style.css";
 
 const Form = ({ amount, setAmount, options, option, setOption, setScore, score }) => {
@@ -13,7 +14,7 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
       .find(({ value }) => value === option)
       .converter;
 
-     setScore(score = amount * rate);
+    setScore(score = amount * rate);
   };
 
   const onFormSubmit = (event) => {
@@ -28,6 +29,7 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
       onSubmit={onFormSubmit}
     >
       <fieldset className="form__fieldset">
+        <Clock />
         <legend className="form__legend">Kalkulator walutowy</legend>
         <span className="form__labelText">
           Wybierz walutę:
