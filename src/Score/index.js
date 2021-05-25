@@ -5,7 +5,7 @@ const Score = ({ option, amount, score }) => {
   return (
 
     <div className="score">
-      <strong>{amount}</strong> złotych to: <strong>{score}</strong> {option === "euro" ? "euro" : "magicznej rudy"}
+      <strong>{amount}</strong> PLN to: <strong>{score}</strong> {option}
     </div>
   );
 };
