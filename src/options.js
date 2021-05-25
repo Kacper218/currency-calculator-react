@@ -1,5 +1,4 @@
-export 
-  const options = [
+export const options = [
     {
       id: 1,
       label: "Euro",
