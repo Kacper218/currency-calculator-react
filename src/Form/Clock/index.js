@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import {useCurrentDate} from "./useCurrentDate";
 import "./style.css"
 
 const formatDate = (myDate) => myDate.toLocaleDateString("pl-PL", {
@@ -11,18 +12,7 @@ const formatDate = (myDate) => myDate.toLocaleDateString("pl-PL", {
 });
 
 const Clock = () => {
-
-  const [myDate, setMyDate] = useState(new Date())
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setMyDate(new Date())
-    }, 1000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+  const myDate = useCurrentDate();
 
   return (
     <div className="Clock">
@@ -32,6 +22,5 @@ const Clock = () => {
     </div>
   );
 };
-
 
 export default Clock;
