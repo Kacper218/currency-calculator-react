@@ -1,6 +1,6 @@
 import React from 'react';
+import { TimeAndDate } from './styled';
 import {useCurrentDate} from "./useCurrentDate";
-import "./style.css"
 
 const formatDate = (myDate) => myDate.toLocaleDateString("pl-PL", {
   weekday: "long",
@@ -15,11 +15,11 @@ const Clock = () => {
   const myDate = useCurrentDate();
 
   return (
-    <div className="Clock">
+    <TimeAndDate>
       Dzisiaj jest
       {" "}
       {formatDate(myDate)}
-    </div>
+    </TimeAndDate>
   );
 };
 
