@@ -1,6 +1,6 @@
 import React from 'react';
 import Clock from './Clock';
-import "./style.css";
+import {FormSelect, FormFieldset, FormLegend, LabelText, FormInput, FormButton} from "./styled";
 
 const Form = ({ amount, setAmount, options, option, setOption, setScore, score }) => {
 
@@ -20,22 +20,17 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
   const onFormSubmit = (event) => {
     event.preventDefault();
     calculateScore(options, amount);
-
   };
 
   return (
     <form
-      className="form"
       onSubmit={onFormSubmit}
     >
-      <fieldset className="form__fieldset">
+      <FormFieldset>
         <Clock />
-        <legend className="form__legend">Kalkulator walutowy</legend>
-        <span className="form__labelText">
-          Wybierz walutę:
-            </span>
-        <select
-          className="form__field"
+        <FormLegend>Kalkulator Walutowy</FormLegend>
+        <LabelText>Wybierz walutę: </LabelText>
+        <FormSelect
           name="currency"
           value={option}
           onChange={onSelectChange}
@@ -48,15 +43,14 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
               {option.label}
             </option>
           ))}
-        </select>
+        </FormSelect>
         <p>
           <label>
-            <span className="form__labelText">
+            <LabelText>
               Podaj kwotę do przeliczenia w zł:
-              </span>
-            <input
+            </LabelText>
+            <FormInput
               required
-              className="form__field"
               type="number"
               min="0.01"
               step="0.01"
@@ -65,9 +59,9 @@ const Form = ({ amount, setAmount, options, option, setOption, setScore, score }
             />
           </label>
         </p>
-      </fieldset>
+      </FormFieldset>
       <p>
-        <button className="form__button">Oblicz!</button>
+        <FormButton>Oblicz!</FormButton>
       </p>
     </form>
   );
