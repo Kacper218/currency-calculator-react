@@ -1,4 +1,4 @@
-import styled from "styled-componentsa";
+import styled from "styled-components";
 
 export const MainContainer = styled.main`
     flex-basis: 700px;
