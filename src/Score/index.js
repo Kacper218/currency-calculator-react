@@ -1,12 +1,11 @@
 import React from 'react';
-import "./style.css";
+import { ScoreElement } from "./styled";
 
 const Score = ({ option, amount, score }) => {
   return (
-
-    <div className="score">
+    <ScoreElement>
       <strong>{amount}</strong> PLN to: <strong>{score}</strong> {option}
-    </div>
+    </ScoreElement>
   );
 };
 
